@@ -6,13 +6,13 @@ import APIProfile from '../../api/APIProfile';
 import APIFollow from '../../api/APIFollow';
 import profile from "../../assets/images/profile.png";
 
-const Follow = () => {
+const FollowInfo = () => {
     const { auth:{ token,user } } = useAppSelector(state=>state);
     
     const [loading,setLoading] = useState<boolean>(false);
     const [follows,setFollows] = useState<any>(null);
-    const [filterType,setFilterType] = useState<string>("following");
     const [profileUser,setProfileUser] = useState<any>(null);
+    const [filterType,setFilterType] = useState<string>("following");
 
     const fetchFollowData = async () => {
         setLoading(true);
@@ -93,4 +93,4 @@ const Follow = () => {
     )
 }
 
-export default Follow;
+export default FollowInfo;

@@ -1,5 +1,5 @@
 import { Route,Routes } from "react-router-dom";
-import { Home, Login, MainAuth, Profile, Register,Post, Search, Follow } from "./pages";
+import { Home, Login, MainAuth, Profile, Register,PostDetail, SearchAccount, FollowInfo } from "./pages";
 import { Main } from "./components";
 
 const App = () => {
@@ -13,9 +13,9 @@ const App = () => {
         <Route path="/" element={<Main/>}>
            <Route index element={<Home/>}/>
            <Route path="profile/:id" element={<Profile/>}/>
-           <Route path="post/:id" element={<Post/>}/>
-           <Route path="search" element={<Search/>}/>
-           <Route path="follow" element={<Follow/>}/>
+           <Route path="post/:id" element={<PostDetail/>}/>
+           <Route path="search" element={<SearchAccount/>}/>
+           <Route path="follow" element={<FollowInfo/>}/>
         </Route>
        </Routes>
     </div>

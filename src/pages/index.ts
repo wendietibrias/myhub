@@ -3,9 +3,9 @@ import Register from "./auth/Register";
 import MainAuth from "./auth/MainAuth";
 import Home from "./main/Home";
 import Profile from "./main/Profile";
-import Post from "./main/Post";
-import Search from "./main/Search";
-import Follow from "./main/Follow";
+import PostDetail from "./main/PostDetail";
+import SearchAccount from "./main/SearchAccount";
+import FollowInfo from "./main/FollowInfo";
 
 export {
     Login,
@@ -13,7 +13,7 @@ export {
     MainAuth,
     Home,
     Profile,
-    Post,
-    Search,
-    Follow
+    PostDetail,
+    SearchAccount,
+    FollowInfo
 }

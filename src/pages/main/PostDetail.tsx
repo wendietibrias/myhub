@@ -11,7 +11,7 @@ import APIComment from "../../api/APIComment";
 import APIPost from "../../api/APIPost";
 import profile from "../../assets/images/profile.png";
 
-const Post = () => {
+const PostDetail = () => {
    const { register,formState:{ errors },handleSubmit,setValue } = useForm();
    const { auth:{ user,token } } = useAppSelector(state=>state);
    const { id } = useParams();
@@ -153,4 +153,4 @@ const Post = () => {
     )
 }
 
-export default Post;
+export default PostDetail;

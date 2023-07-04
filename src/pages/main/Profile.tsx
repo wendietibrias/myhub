@@ -4,6 +4,7 @@ import { useAppSelector } from '../../hooks/redux.hook';
 import { IPostResponse } from '../../interfaces/home.interface';
 import { useParams } from 'react-router-dom';
 import APIProfile from '../../api/APIProfile';
+import { IUserResponseState } from '../../interfaces/global.interface';
 
 const Profile = () => {
   const { id } = useParams();
@@ -11,7 +12,7 @@ const Profile = () => {
   const { open:openProfileModal } = useAppSelector(state=>state.updateProfileModal);
   const { open:openUpdatePostModal } = useAppSelector(state=>state.updatePostModal);
  
-  const [profileUser,setProfileUser] = useState<any>(null);
+  const [profileUser,setProfileUser] = useState<IUserResponseState | any>(null);
   const [loading,setLoading] = useState<boolean>(false);
   const [posts,setPosts] = useState<IPostResponse[]>([]);
 

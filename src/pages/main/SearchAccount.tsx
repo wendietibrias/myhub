@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 import profile from "../../assets/images/profile.png";
 import APIProfile from "../../api/APIProfile";
 import APIUser from "../../api/APIUser";
+import { IProfileBoxState, IUserResponseState } from "../../interfaces/global.interface";
 
-const Search = () => {
+const SearchAccount = () => {
    const { register,formState:{ errors } , handleSubmit } = useForm();
    const { auth:{ token,user } } = useAppSelector(state=>state);
     
    const [loading,setLoading] = useState<boolean>(false);
-   const [users,setUsers] = useState<any>(null);
+   const [users,setUsers] = useState<IUserResponseState[]>([]);
    const [profileUser,setProfileUser] = useState<any>(null);
 
    const fetchAllUser = async () => {
@@ -121,4 +122,4 @@ const Search = () => {
     )
 }
 
-export default Search;
+export default SearchAccount;

@@ -1,13 +1,4 @@
-import { ChangeEvent } from "react";
-import { useForm } from "react-hook-form";
-
-interface IInputProps {
-    error:boolean;
-    name : string;
-    type : string;
-    placeholder : string;
-    register : any;
-}
+import { IInputProps } from '../interfaces/props.interface';
 
 const Input = ({
    error,

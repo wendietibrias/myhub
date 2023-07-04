@@ -1,7 +1,6 @@
 import { AiOutlineHome,AiOutlineUser,AiOutlineSearch,AiOutlineUsergroupAdd } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { LiaUserFriendsSolid } from 'react-icons/lia';
 import { useAppSelector } from '../hooks/redux.hook';
 
 const BottomBar = () => {

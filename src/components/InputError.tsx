@@ -1,4 +1,5 @@
-interface IInputErrorProps {
+
+type IInputErrorProps = {
     message:string;
 }
 

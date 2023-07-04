@@ -1,5 +1,5 @@
 import { useState,useRef,useEffect } from "react";
-import { useForm, SubmitHandler } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import { IUpdatePostModalState } from "../interfaces/global.interface";
 import { IoIosClose } from 'react-icons/io';
 import Input from "./Input";
@@ -7,7 +7,6 @@ import InputError from "./InputError";
 import { useAppDispatch, useAppSelector } from "../hooks/redux.hook";
 import APIPost from "../api/APIPost";
 import LoadingSpinner from "./LoadingSpinner";
-import { useDispatch } from "react-redux";
 import { closeUpdatePostModal } from "../store/updatePostModal.store";
 
 interface IUpdatePostModal {
@@ -98,7 +97,7 @@ const UpdatePostModal = ({
                       <InputError 
                         message={errors.title ? "title field is required" : ""}
                      />
-                     )}
+                  )}
                  </div>
                  <div className="w-full mt-2 flex flex-col gap-y-2">
                      <input {...register('postImage')} type="file" name="postImage" id="postImage" className="hidden"/>
@@ -106,13 +105,12 @@ const UpdatePostModal = ({
                       <label htmlFor="postImage" className="bg-blue-400 cursor-pointer text-white text-[13px] font-semibold py-2 px-4 rounded-full">
                         Upload Image
                      </label>
-   
                      </div>
                      {errors.postImage && (
                         <InputError
                          message={errors.postImage ? "image field is required" : ""}
                       />
-                     )}
+                   )}
                  </div>
                  <button className="text-sm mt-7 bg-blue-400 w-full text-white font-semibold py-2 rounded-full">Update</button>
              </form>

@@ -1,3 +1,6 @@
+import { IPostResponse } from "./home.interface";
+import { IUserResponseState } from "./global.interface";
+
 export interface IProfileUserProps {
    userData: {
       id:string | number;
@@ -26,4 +29,21 @@ export interface IFollowBoxProps {
 
 export interface IEmojiProps {
    emojiClick:(args : any) => void
+}
+
+export interface IInputProps {
+    error:boolean;
+    name : string;
+    type : string;
+    placeholder : string;
+    register : any;
+}
+
+export interface IPostCardProps {
+    post : IPostResponse;
+    fetchPosts:() => void;
+}
+export interface UpdateProfileProps {
+  userData : IUserResponseState;
+  fetchUser: () => void
 }

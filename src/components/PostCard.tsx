@@ -3,28 +3,22 @@ import { FiTrash } from 'react-icons/fi';
 import { AiOutlineEdit,AiOutlineHeart,AiFillHeart } from 'react-icons/ai';
 import { BsChat } from 'react-icons/bs';
 import { Link } from "react-router-dom";
-import { IPostResponse } from "../interfaces/home.interface";
 import { openWrapperAlert } from "../store/wrapperAlert.store";
 import { openUpdatePostModal } from "../store/updatePostModal.store";
+import { IPostCardProps } from '../interfaces/props.interface';
 import profile from "../assets/images/profile.png";
 import APIPost from "../api/APIPost";
 import APILike from "../api/APILike";
-
-interface IPostCardProps {
-    post : IPostResponse;
-    fetchPosts:() => void;
-}
 
 const PostCard = ({ 
    post ,
    fetchPosts
 } : IPostCardProps) => {
+   
   let checkLike; 
- 
   const dispatch = useAppDispatch();
   const { auth:{ user,token } } = useAppSelector(state=>state);
-
-  checkLike = post?.likes?.find((item)=>item.user.id == user.id);
+  checkLike = post?.likes?.find((item : any)=>item.user.id == user.id);
 
   const likePost = async () => {
       try {
@@ -38,7 +32,7 @@ const PostCard = ({
          }
 
       } catch(err) {
-
+         return err;
       }
   }
 

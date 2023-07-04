@@ -3,7 +3,6 @@ import { LoadingSpinner, ProfileBox,PostCard, UpdateProfileModal, UpdatePostModa
 import { useAppSelector } from '../../hooks/redux.hook';
 import { IPostResponse } from '../../interfaces/home.interface';
 import { useParams } from 'react-router-dom';
-import APIPost from '../../api/APIPost';
 import APIProfile from '../../api/APIProfile';
 
 const Profile = () => {

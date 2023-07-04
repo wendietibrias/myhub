@@ -1,6 +1,6 @@
 import ReactLoading from "react-loading";
 
-interface ILoadingProps {
+type ILoadingProps = {
     width:string;
     height:string;
 }

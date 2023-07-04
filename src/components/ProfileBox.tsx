@@ -1,6 +1,5 @@
-import {  useEffect, useState } from "react";
 import { FiBriefcase } from 'react-icons/fi';
-import { AiOutlineEdit,AiOutlineCalendar,AiOutlineCamera, AiFillCamera } from 'react-icons/ai';
+import { AiOutlineEdit,AiOutlineCalendar, AiFillCamera } from 'react-icons/ai';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { useAppDispatch, useAppSelector } from "../hooks/redux.hook";
 import { Link,useLocation } from "react-router-dom";

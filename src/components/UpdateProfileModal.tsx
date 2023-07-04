@@ -1,18 +1,14 @@
-import { useState,useEffect } from "react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useAppDispatch, useAppSelector } from "../hooks/redux.hook";
 import { IoIosClose } from "react-icons/io";
 import { closeProfileModal } from "../store/updateProfileModal";
 import Input from "./Input";
 import InputError from "./InputError";
-import { IUserResponseState } from "../interfaces/global.interface";
 import APIProfile from "../api/APIProfile";
 import { setToken } from "../store/user.store";
+import { UpdateProfileProps } from "../interfaces/props.interface";
 
-interface UpdateProfileProps {
-  userData : IUserResponseState;
-  fetchUser: () => void
-}
 
 const UpdateProfileModal = ({
   userData,
@@ -21,7 +17,6 @@ const UpdateProfileModal = ({
    const dispatch = useAppDispatch();
    const { auth:{ token } } = useAppSelector(state=>state);
    const { register,formState:{ errors },handleSubmit,setValue } = useForm();
-
 
    const submitHandler = async (data : any) => {
         try{

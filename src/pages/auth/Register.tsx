@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { AiOutlineSecurityScan,AiOutlineEye,AiOutlineEyeInvisible,AiOutlineCheckCircle } from 'react-icons/ai';
 import { IRegisterState } from '../../interfaces/register.interface';
-import { useForm,SubmitHandler } from "react-hook-form";
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 import { Input, InputError, LoadingSpinner } from '../../components';
 import APIAuth from '../../api/APIAuth';
 
